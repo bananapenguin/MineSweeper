@@ -27,6 +27,8 @@ public class Timer extends Thread {
 					estimatedTime = System.nanoTime() - startTime;
 					sleep(1000-estimatedTime/1000000L);
 				}
+				//何か処理がないとタイマーがちゃんと動かない
+				sleep(0);
 			}
 			
 		} catch (InterruptedException e) {
